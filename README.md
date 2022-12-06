@@ -1,24 +1,30 @@
-# README
+# SearchEngine_SIGQ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Repository for file Search Engine application for SIGQ
 
-Things you may want to cover:
+## Check ongoing work in the Project Board
 
-* Ruby version
+https://github.com/orgs/ci2-ipt/projects/1
 
-* System dependencies
+## Branch name conventions:
 
-* Configuration
+* For features: feature/SIGQ-**TIC_NUM**/**TICKET-DESC**
+* For bugfixes: bugfix/SIGQ-**TIC_NUM**/**TICKET-DESC**  
+  
+    Where:
+     * TIC_NUM - Ticket Number / ID
+     * TICKET-DESC - Brief 3 to 6 word description of the ticket/issue based on its title
+  
+    Examples:
+     * feature/SIGQ-01/add-user-model
+     * bugfix/SIGQ-13/index-title-has-wrong-color
+     
+## Sketch of ideas:
+![sketch](https://user-images.githubusercontent.com/80701707/205761353-94ca0d29-e6d3-4f1b-a7e6-34b7775a10ee.jpg)
 
-* Database creation
 
-* Database initialization
+## Being done by:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Gonçalo Sousa: https://github.com/Sousa1909
+* Rafael Rofrigues: https://github.com/RafaR01
+* António Fialho: https://github.com/t0t0cas
