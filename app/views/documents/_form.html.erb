@@ -1,0 +1,32 @@
+<%= form_with(model: document) do |form| %>
+  <% if document.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+        <% document.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :fileName, style: "display: block" %>
+    <%= form.text_field :fileName %>
+  </div>
+
+  <div>
+    <%= form.label :savePath, style: "display: block" %>
+    <%= form.text_field :savePath %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
