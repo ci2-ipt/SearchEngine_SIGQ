@@ -7,12 +7,13 @@ class CategoryTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  test 'if model can be save with null atributtes' do
+
+  test 'if model can be saved with null atributtes' do
     c = Category.new
     assert !c.save
   end
 
-  test 'if model can be save with a name that contains numbers' do
+  test 'if model can be saved with a name that contains numbers' do
     c = Category.new
     c.name = 'Relatório'
     if c.name.count('0-9').positive?
@@ -22,7 +23,7 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'if model can be save with a name that contains spaces' do
+  test 'if model can be saved with a name that contains spaces' do
     c = Category.new
     c.name = 'Relatório'
     (0..c.name.length).each do |j|
@@ -35,7 +36,8 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'if model can be save with a name that contains special characters' do
+  test 'if model can be saved with a name that contains special characters' do
+
     c = Category.new
     c.name = 'Relatório'
     if c.name.scan(%r{[!@#$%^&*()_+{}\[\]:;'"/\\?><.,]}).empty?
@@ -45,7 +47,7 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'if model can be save with a name bigger than 15 characters' do
+  test 'if model can be saved with a name bigger than 15 characters' do
     c = Category.new
     c.name = 'Relatório'
     if c.name.count('a-zA-Z') > 15
@@ -55,7 +57,7 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'if model can be save with a name smaller than 5 characters' do
+  test 'if model can be saved with a name smaller than 5 characters' do
     c = Category.new
     c.name = 'Relatório'
     if c.name.count('a-zA-Z') < 5
@@ -65,7 +67,8 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'if model can be save with a name that is a repeatable character' do
+
+  test 'if model can be saved with a name that is a repeatable character' do
     c = Category.new
     c.name = 'Relatório'
     ('a'..'z').each do |letter|
@@ -87,7 +90,7 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'if model can be save with a name that contains uppercase letters besides the first character' do
+  test 'if model can be saved with a name that contains uppercase letters besides the first character' do
     c = Category.new
     c.name = 'Relatório'
     ('A'..'Z').each do |letter|
@@ -99,9 +102,9 @@ class CategoryTest < ActiveSupport::TestCase
     assert c.save
   end
 
-  test 'if model can be save with a name that starts with a lowercase character' do
+  test 'if model can be saved with a name that starts with a lowercase character' do
     c = Category.new
-    c.name = 'relatório'
+    c.name = 'Relatório'
     ('a'..'z').each do |letter|
       assert !c.save if c.name[0] == letter
     end
