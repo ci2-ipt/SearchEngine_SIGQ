@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Category < ApplicationRecord
-    validates :categoryName, presence: true
+  validates :name, presence: true
 end
