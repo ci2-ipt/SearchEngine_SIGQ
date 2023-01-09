@@ -7,13 +7,13 @@
 name: "Ruby on Rails CI"
 on:
   push:
-    branches: [ "main" , "sprint-2" ] 
+    branches: [ "main" , "sprint-2" , "feature/SIGQ-14/Assert-testing-categories"] 
   pull_request:
-    branches: [ "main" , "sprint-2" ]
+    branches: [ "main" , "sprint-2" , "feature/SIGQ-14/Assert-testing-categories"]
 jobs:
   test:
     runs-on: ubuntu-latest
-    services:
+    services: 
       postgres:
         image: postgres:11-alpine
         ports:
