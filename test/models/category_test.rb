@@ -7,6 +7,7 @@ class CategoryTest < ActiveSupport::TestCase
   #   assert true
   # end
 
+
   test 'if model can be saved with null atributtes' do
     c = Category.new
     assert !c.save
@@ -36,6 +37,7 @@ class CategoryTest < ActiveSupport::TestCase
   end
 
   test 'if model can be saved with a name that contains special characters' do
+
     c = Category.new
     c.name = 'Relatório'
     if c.name.scan(%r{[!@#$%^&*()_+{}\[\]:;'"/\\?><.,]}).empty?
@@ -64,6 +66,7 @@ class CategoryTest < ActiveSupport::TestCase
       assert c.save
     end
   end
+
 
   test 'if model can be saved with a name that is a repeatable character' do
     c = Category.new
