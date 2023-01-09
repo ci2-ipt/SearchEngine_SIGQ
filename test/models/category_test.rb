@@ -101,7 +101,7 @@ class CategoryTest < ActiveSupport::TestCase
 
   test 'if model can be save with a name that starts with a lowercase character' do
     c = Category.new
-    c.name = 'Relatório'
+    c.name = 'relatório'
     ('a'..'z').each do |letter|
       assert !c.save if c.name[0] == letter
     end
