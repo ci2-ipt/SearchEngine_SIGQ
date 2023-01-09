@@ -7,9 +7,9 @@
 name: "Ruby on Rails CI"
 on:
   push:
-    branches: [ "feature/SIGQ-14/Assert-testing-categories" ]
+    branches: [ "main" , "sprint-2" ] 
   pull_request:
-    branches: [ "feature/SIGQ-14/Assert-testing-categories" ]
+    branches: [ "main" , "sprint-2" ]
 jobs:
   test:
     runs-on: ubuntu-latest

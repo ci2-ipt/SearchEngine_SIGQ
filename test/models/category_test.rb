@@ -87,7 +87,6 @@ class CategoryTest < ActiveSupport::TestCase
     end
   end
 
-  #liting test
   test 'if model can be saved with a name that contains uppercase letters besides the first character' do
     c = Category.new
     c.name = 'Relatório'
